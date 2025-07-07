@@ -1,6 +1,6 @@
 "use client";
 
-const code = `import { useState } from \"react\";
+const code = `import { useState } from "react";
 
 const emptyBoard = Array(9).fill(null);
 
@@ -26,13 +26,13 @@ export default function TicTacToeDemo() {
   const status = winner
     ? `Winner: ${winner}`
     : squares.every(Boolean)
-    ? \"Draw!\"
-    : `Next player: ${xIsNext ? \"X\" : \"O\"}`;
+    ? "Draw!"
+    : `Next player: ${xIsNext ? "X" : "O"}`;
 
   function handleClick(i) {
     if (squares[i] || winner) return;
     const nextSquares = squares.slice();
-    nextSquares[i] = xIsNext ? \"X\" : \"O\";
+    nextSquares[i] = xIsNext ? "X" : "O";
     setSquares(nextSquares);
     setXIsNext(!xIsNext);
   }
