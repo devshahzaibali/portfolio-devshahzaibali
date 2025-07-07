@@ -26,6 +26,28 @@ const BlogSection = () => {
   const [error, setError] = useState<string | null>(null);
   const [imageError, setImageError] = useState<Record<string, boolean>>({});
 
+  // Demo blog posts
+  const demoPosts: BlogPost[] = [
+    {
+      id: "demo1",
+      slug: "demo-blog-1",
+      title: "How to Build a Stunning Portfolio with Next.js",
+      summary: "Learn how to create a modern, responsive developer portfolio using Next.js, Tailwind CSS, and best practices for 2024.",
+      date: "2024-07-01",
+      imageUrl: "/assets/projects/amazonclone.png",
+      isNew: true,
+    },
+    {
+      id: "demo2",
+      slug: "demo-blog-2",
+      title: "Top 10 Tips for Web Developers in 2024",
+      summary: "Discover the latest trends, tools, and tips to stay ahead as a web developer this year.",
+      date: "2024-06-15",
+      imageUrl: "/assets/projects/tictactoe.png",
+      isNew: true,
+    },
+  ];
+
   useEffect(() => {
     const fetchPosts = async () => {
       try {
@@ -33,8 +55,10 @@ const BlogSection = () => {
         const response = await fetch("/api/blog");
         if (!response.ok) throw new Error("Failed to fetch posts");
         const data = await response.json();
-        setPosts(data);
+        // If no posts, show demo posts
+        setPosts(data.length ? data : demoPosts);
       } catch (err) {
+        setPosts(demoPosts);
         setError(err instanceof Error ? err.message : "Unknown error");
       } finally {
         setLoading(false);
