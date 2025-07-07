@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+  overflow-x: hidden;
+}
+
+body {
+  @apply bg-white text-gray-800 font-sans transition-colors duration-300 overflow-x-hidden;
+}
+
+.dark body {
+  @apply bg-gray-900 text-gray-100;
+}
+
+/* Ensure all sections are responsive */
+
+section {
+  @apply w-full overflow-hidden;
+}
+
+/* Fix for mobile horizontal scroll */
+
+* {
+  box-sizing: border-box;
+}
