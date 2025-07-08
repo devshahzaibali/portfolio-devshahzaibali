@@ -2,18 +2,16 @@
 
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
+import { getPosts } from "@/lib/blogStore";
 
 export default function BlogPostPage() {
   const { slug } = useParams();
   const [post, setPost] = useState<any>(null);
 
   useEffect(() => {
-    fetch("/api/blog")
-      .then((res) => res.json())
-      .then((posts) => {
-        const found = posts.find((p: any) => p.slug === slug);
-        setPost(found);
-      });
+    const posts = getPosts();
+    const found = posts.find((p: any) => p.slug === slug);
+    setPost(found);
   }, [slug]);
 
   if (!post) {

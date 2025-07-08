@@ -28,7 +28,9 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
+    unoptimized: true,
   },
+  output: 'export',
 };
 
 export default nextConfig;

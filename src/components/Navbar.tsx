@@ -45,19 +45,19 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { name: "GitHub", href: "https://github.com/shahzaibali", icon: FaGithub },
+  { name: "GitHub", href: "https://github.com/devshahzaibali", icon: FaGithub },
   {
     name: "LinkedIn",
-    href: "https://linkedin.com/in/shahzaibali",
+    href: "https://www.linkedin.com/in/devshahzaib-ali-b75ba7308?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     icon: FaLinkedin,
   },
-  { name: "Twitter", href: "https://twitter.com/shahzaibali", icon: FaTwitter },
+  { name: "Twitter", href: "https://x.com/devshahzaibali?t=aCugTK5EUSgtmPyAkqBn2Q&s=08", icon: FaTwitter },
   {
     name: "Instagram",
-    href: "https://instagram.com/shahzaibali",
+    href: "https://www.instagram.com/devshahzaibali?utm_source=qr&igsh=MTc3MjB1NGlvc3ltcA==",
     icon: FaInstagram,
   },
-  { name: "Email", href: "mailto:shahzaib@example.com", icon: FaEnvelope },
+  { name: "Email", href: "mailto:techzaibx@gmail.com", icon: FaEnvelope },
 ];
 
 const Navbar = () => {

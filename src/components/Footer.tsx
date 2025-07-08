@@ -19,17 +19,17 @@ const Footer = () => {
     },
     {
       icon: <FaLinkedinIn />,
-      url: "https://linkedin.com/in/devshahzaib-ali-b75ba7308",
+      url: "https://www.linkedin.com/in/devshahzaib-ali-b75ba7308?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
       color: "hover:text-blue-400",
     },
     {
       icon: <FaTwitter />,
-      url: "https://x.com/devshahzaibali",
+      url: "https://x.com/devshahzaibali?t=aCugTK5EUSgtmPyAkqBn2Q&s=08",
       color: "hover:text-sky-400",
     },
     {
       icon: <FaInstagram />,
-      url: "https://www.instagram.com/devshahzaibali",
+      url: "https://www.instagram.com/devshahzaibali?utm_source=qr&igsh=MTc3MjB1NGlvc3ltcA==",
       color: "hover:text-pink-400",
     },
   ];
@@ -128,7 +128,7 @@ const Footer = () => {
               </motion.a>
             ))}
             <motion.a
-              href="mailto:your.email@example.com"
+              href="mailto:techzaibx@gmail.com"
               className="p-2 rounded-full hover:text-red-400 transition-colors"
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}

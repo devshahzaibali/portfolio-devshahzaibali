@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
+import { getPosts } from "@/lib/blogStore";
 
 type BlogPost = {
   id: string;
@@ -49,23 +50,16 @@ const BlogSection = () => {
   ];
 
   useEffect(() => {
-    const fetchPosts = async () => {
-      try {
-        setLoading(true);
-        const response = await fetch("/api/blog");
-        if (!response.ok) throw new Error("Failed to fetch posts");
-        const data = await response.json();
-        // If no posts, show demo posts
-        setPosts(data.length ? data : demoPosts);
-      } catch (err) {
-        setPosts(demoPosts);
-        setError(err instanceof Error ? err.message : "Unknown error");
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchPosts();
+    try {
+      const data = getPosts();
+      setPosts(data.length ? data : demoPosts);
+      setError(null);
+    } catch (err) {
+      setPosts(demoPosts);
+      setError(err instanceof Error ? err.message : "Unknown error");
+    } finally {
+      setLoading(false);
+    }
   }, []);
 
   // Animation variants

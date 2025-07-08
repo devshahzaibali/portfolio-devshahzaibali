@@ -9,13 +9,16 @@ import {
   FiGithub,
   FiLinkedin,
   FiTwitter,
+  FiInstagram,
 } from "react-icons/fi";
 
 const HeroSection = () => {
   const socialLinks = [
-    { icon: <FiGithub />, url: "https://github.com/yourusername" },
-    { icon: <FiLinkedin />, url: "https://linkedin.com/in/yourusername" },
-    { icon: <FiTwitter />, url: "https://twitter.com/yourusername" },
+    { icon: <FiGithub />, url: "https://github.com/devshahzaibali" },
+    { icon: <FiLinkedin />, url: "https://www.linkedin.com/in/devshahzaib-ali-b75ba7308?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+    { icon: <FiTwitter />, url: "https://x.com/devshahzaibali?t=aCugTK5EUSgtmPyAkqBn2Q&s=08" },
+    { icon: <FiInstagram />, url: "https://www.instagram.com/devshahzaibali?utm_source=qr&igsh=MTc3MjB1NGlvc3ltcA==" },
+    { icon: <FiMail />, url: "mailto:techzaibx@gmail.com" },
   ];
 
   return (
